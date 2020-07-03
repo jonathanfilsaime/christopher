@@ -1,27 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import ButtonExampleButton from './components/ButtonExampleButton.js'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import MenuBar from './components/MenuBar'
+import Home from './components/Home'
+import Games from './components/Games'
+import Sketches from './components/Sketches'
+import Projects from './components/Projects'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <ButtonExampleButton/>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <MenuBar/>
+          <Switch>
+            <Route path="/" component={Home} exact/>
+            <Route path="/games" component={Games}/>
+            <Route path="/sketches" component={Sketches}/>
+            <Route path="/projects" component={Projects}/>
+            <Route component={Error}/>
+          </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
