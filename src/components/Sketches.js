@@ -1,5 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
+import UnderConstruction from '../images/UnderConstruction.png'
+import '../App.css';
 
-const Sketches = () => <h1>Sketches</h1>
+export default class Sketches extends Component {
+    state = {}
 
-export default Sketches
+    render() {
+        return (
+            <div className="App">
+                <img src={UnderConstruction} />
+            </div>
+        )
+    }
+}

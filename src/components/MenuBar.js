@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 
 export default class MenuBar extends Component {
   state = {}
@@ -13,37 +13,45 @@ export default class MenuBar extends Component {
 
     return (
       <Menu>
-        <Menu.Item
-          name='home'
-          active={activeItem === 'home'}
-          onClick={this.handleItemClick}
-        >
-          <NavLink to="/">Home</NavLink>
-        </Menu.Item>
+        <NavLink to="/">
+          <Menu.Item
+            name='home'
+            active={activeItem === 'home'}
+            onClick={this.handleItemClick}
+          >
+            Home
+          </Menu.Item>
+        </NavLink>
 
-        <Menu.Item
-          name='games'
-          active={activeItem === 'games'}
-          onClick={this.handleItemClick}
-        >
-          <NavLink to="/games">Games</NavLink>
-        </Menu.Item>
+        <NavLink to="/games">
+          <Menu.Item
+            name='games'
+            active={activeItem === 'games'}
+            onClick={this.handleItemClick}
+          >
+            Games
+          </Menu.Item>
+        </NavLink>
 
-        <Menu.Item
-          name='sketches'
-          active={activeItem === 'sketches'}
-          onClick={this.handleItemClick}
-        >
-          <NavLink to="/sketches">Sketches</NavLink>
-        </Menu.Item>
+        <NavLink to="/sketches">
+          <Menu.Item
+            name='sketches'
+            active={activeItem === 'sketches'}
+            onClick={this.handleItemClick}
+          >
+            Sketches
+          </Menu.Item>
+        </NavLink>
 
-        <Menu.Item
-          name='projects'
-          active={activeItem === 'projects'}
-          onClick={this.handleItemClick}
-        >
-          <NavLink to="/projects">Projects</NavLink>
-        </Menu.Item>
+        <NavLink to="/projects">
+          <Menu.Item
+            name='projects'
+            active={activeItem === 'projects'}
+            onClick={this.handleItemClick}
+          >
+            Projects
+          </Menu.Item>
+        </NavLink>
       </Menu>
     )
   }

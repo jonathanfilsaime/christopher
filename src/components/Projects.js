@@ -1,5 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
+import UnderConstruction from '../images/UnderConstruction.png'
+import '../App.css';
 
-const Projects = () => <h1>Projects</h1>
+export default class Projects extends Component {
+    state = {}
 
-export default Projects
+    render() {
+        return (
+            <div className="App">
+                <img src={UnderConstruction} />
+            </div>
+        )
+    }
+}

@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import MenuBar from './components/MenuBar'
-import Home from './components/Home'
-import Games from './components/Games'
-import Sketches from './components/Sketches'
-import Projects from './components/Projects'
+import MenuBar from './components/MenuBar.js'
+import Home from './components/Home.js'
+import Games from './components/Games.js'
+import Sketches from './components/Sketches.js'
+import Projects from './components/Projects.js'
 
 
 function App() {
