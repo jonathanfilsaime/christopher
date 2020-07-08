@@ -6,6 +6,7 @@ import Home from './components/Home.js'
 import Games from './components/Games.js'
 import Sketches from './components/Sketches.js'
 import Projects from './components/Projects.js'
+import Error from './components/Error.js'
 
 
 function App() {
